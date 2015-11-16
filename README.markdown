@@ -39,7 +39,7 @@ ember = https://www.kickstarter.com/projects/842978788/ember-equipment-modular-u
 
 Now give it a test run:
 ``` bash
-$ python ksCom.py
+$ python KSComCheck.py
 ```
 
 ### Run on a schedule
