@@ -107,3 +107,9 @@ I made the icon in about 10 minutes using [Michael Flarup][]'s incredible [App I
 
 [Michael Flarup]: http://www.pixelresort.com/
 [App Icon Template]: http://appicontemplate.com/
+
+## To do
+
+- [ ] Add tests
+- [ ] Add launchservices plist and instructions for scheduling
+- [ ] Improve comment detection to detect number of new comments since last check
