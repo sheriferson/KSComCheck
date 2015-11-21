@@ -1,6 +1,7 @@
 *.p
 *.un~
 *.swp
+.cache/
 _archive/
 production/
 latesthash.p

@@ -20,7 +20,7 @@ pathToMe = os.path.split(pathToMe)[0]
 pathToPickle = os.path.join(pathToMe, "latesthash.p")
 pathToLogo = os.path.join(pathToMe, "kscc.png")
 
-def readProjectLinks():
+def readProjectLinks(configFile):
     """
     This function will look for the projects.conf file and parse it to
     get the projects and their corresponding comments links.
@@ -28,8 +28,8 @@ def readProjectLinks():
     It will save those in projects{}
     """
     config = ConfigParser.ConfigParser()
-    if os.path.isfile('projects.conf'):
-        config.readfp(open('projects.conf'))
+    if os.path.isfile(configFile):
+        config.readfp(open(configFile))
 
     projects = {}
     try:
@@ -181,7 +181,7 @@ if __name__ == "__main__":
     projectAuthors = {}
     projectComments = {}
     # what projects do you want to stay updated on?
-    projectLinks = readProjectLinks()
+    projectLinks = readProjectLinks('projects.conf')
     # what are the latest comments on those project, and who are the authors?
     projectAuthors, projectComments = getLatestCommentAndAuthorForProjects(projectLinks)
     # have you been notified of these comments before?
