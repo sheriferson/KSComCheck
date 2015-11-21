@@ -110,6 +110,7 @@ I made the icon in about 10 minutes using [Michael Flarup][]'s incredible [App I
 
 ## To do
 
-- [ ] Add tests
+- [x] Add tests
 - [ ] Add launchservices plist and instructions for scheduling
 - [ ] Improve comment detection to detect number of new comments since last check
+- [ ] Package `KSComCheck` with `setuptools` for easier installation
