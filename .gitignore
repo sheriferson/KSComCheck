@@ -3,5 +3,6 @@
 *.swp
 .cache/
 _archive/
+_assets/
 production/
 latesthash.p

@@ -17,6 +17,7 @@ from subprocess import call
 pathToMe = os.path.realpath(__file__)
 pathToMe = os.path.split(pathToMe)[0]
 
+pathToConf = os.path.join(pathToMe, "projects.conf")
 pathToPickle = os.path.join(pathToMe, "latesthash.p")
 pathToLogo = os.path.join(pathToMe, "kscc.png")
 
@@ -181,7 +182,7 @@ if __name__ == "__main__":
     projectAuthors = {}
     projectComments = {}
     # what projects do you want to stay updated on?
-    projectLinks = readProjectLinks('projects.conf')
+    projectLinks = readProjectLinks(pathToConf)
     # what are the latest comments on those project, and who are the authors?
     projectAuthors, projectComments = getLatestCommentAndAuthorForProjects(projectLinks)
     # have you been notified of these comments before?
