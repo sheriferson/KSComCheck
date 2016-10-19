@@ -71,17 +71,17 @@ def getLatestCommentAndAuthorForProjects(projects):
     projectLatestComments = {}
 
     if len(projects) > 0:
-        try:
-            for project in projects.keys():
-                link = projects[project]
-                request = requests.get(link)
-                bsSoup = bs4.BeautifulSoup(request.text, 'lxml')
-                author, comment = parseProjectHTML(bsSoup)
-                projectLatestAuthors[project] = author
-                projectLatestComments[project] = comment
-        except:
-            print "An error occurred while trying to download the comments."
-            quit
+        # try:
+        for project in projects.keys():
+            link = projects[project]
+            request = requests.get(link)
+            bsSoup = bs4.BeautifulSoup(request.text, 'lxml')
+            author, comment = parseProjectHTML(bsSoup)
+            projectLatestAuthors[project] = author
+            projectLatestComments[project] = comment
+        # except:
+        #     print "An error occurred while trying to download the comments."
+        #     quit
 
     return projectLatestAuthors, projectLatestComments
 
@@ -95,7 +95,7 @@ def parseProjectHTML(ksoup):
     """
     # find all the comments. 
     # at this point coms will be a list of 50 elements
-    coms = ksoup.findAll('div', {'class': 'main clearfix pl2 ml2'})
+    coms = ksoup.findAll('div', {'class': 'main clearfix pl3 ml3'})
 
     # the latest comment will contain two <p> elements
     # one for the author, one for the comment

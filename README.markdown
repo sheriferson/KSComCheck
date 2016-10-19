@@ -22,8 +22,9 @@ $ brew install terminal-notifier
 
 Until I find a better way of handling dependencies so you don't have to, the script also needs the following python modules
 
-- [ BeautifulSoup4 ](http://www.crummy.com/software/BeautifulSoup/)
-- [ requests ](http://docs.python-requests.org/en/latest/)
+- [BeautifulSoup4](http://www.crummy.com/software/BeautifulSoup/)
+- [requests](http://docs.python-requests.org/en/latest/)
+- [lxml](http://lxml.de)
 
 ``` bash
 $ pip install BeautifulSoup4 requests
